@@ -1,0 +1,12 @@
+---
+// No props needed, since you're hardcoding Formspree for now
+---
+
+<section id="newsletter" class="p-8 bg-gray-100 rounded mt-8">
+  <h2 class="text-xl font-semibold mb-2">📬 Join Our Newsletter</h2>
+  <form action="https://formspree.io/f/myzeowwl" method="POST" class="flex flex-col sm:flex-row gap-2">
+    <input type="email" name="email" placeholder="Enter your email" required class="p-2 border border-gray-300 rounded w-full sm:w-auto flex-grow" />
+    <input type="hidden" name="_redirect" value="https://ushauribora.org/thank-you" />
+    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Subscribe</button>
+  </form>
+</section>

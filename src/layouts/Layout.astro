@@ -1,22 +1,30 @@
+---
+import "../styles/global.css";
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ushauri Bora — Shaping Africa’s Data Future</title>
+
+		<!-- SEO Meta -->
+		<meta name="description" content="Ushauri Bora is a next-gen policy consulting firm empowering Africa’s digital evolution through ethical data governance, AI integration, and capacity building." />
+		<meta name="keywords" content="Ushauri Bora, Data Governance, Privacy, AI, Policy, Africa, Digital Policy, Consulting, Ethics" />
+		<meta name="author" content="Ushauri Bora Team" />
+
+		<!-- OG Tags -->
+		<meta property="og:title" content="Ushauri Bora — Shaping Africa’s Data Future" />
+		<meta property="og:description" content="Policy. Privacy. Progress. Join us in shaping ethical digital futures for Africa." />
+		<meta property="og:image" content="/assets/images/og-image.jpg" />
+		<meta property="og:url" content="https://ushauribora.github.io" />
+		<meta property="og:type" content="website" />
+
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" href="/assets/images/favicon.ico" />
 	</head>
-	<body>
+	<body class="bg-white text-gray-900 font-sans antialiased">
 		<slot />
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

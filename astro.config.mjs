@@ -1,7 +1,7 @@
-import github from '@astrojs/github';
+import { defineConfig } from "astro/config";
+import github from "@astrojs/github";
 
-export default {
-  output: 'static',
+export default defineConfig({
   integrations: [github()],
-  base: '/ushauri-bora-site/',
-};
+  base: "/ushauri-bora-site/", // your GitHub repo name
+});

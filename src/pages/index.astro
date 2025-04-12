@@ -1,11 +1,62 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+layout: "../layouts/Layout.astro"
+import Header from "../components/Header.astro";
+import HeroBanner from "../components/HeroBanner.astro";
+import NewsletterForm from "../components/NewsletterForm.astro";
+import DownloadResource from "../components/DownloadResource.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import ServiceCard from "../components/ServiceCard.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const services = [
+  {
+    title: "Policy & Strategy",
+    description: "Crafting robust data protection frameworks and digital economy policies tailored for African realities."
+  },
+  {
+    title: "Privacy & AI Governance",
+    description: "Guiding organizations on privacy laws, responsible AI, and trust-by-design systems."
+  },
+  {
+    title: "Capacity Building",
+    description: "Upskilling public and private professionals to become certified privacy and policy leaders."
+  }
+];
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<Header />
+<HeroBanner />
+
+<section class="bg-white py-8 px-6 text-center">
+  <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+    Ushauri Bora is a next-gen policy consulting firm empowering Africa’s digital evolution through ethical data governance, AI integration, and capacity building.
+  </p>
+</section>
+
+<section class="py-10 px-6 bg-indigo-50 text-center">
+  <a href="#updates" class="bg-indigo-600 text-white py-2 px-4 rounded-full mx-2 hover:bg-indigo-700 transition">
+    📩 Get Updates
+  </a>
+  <a href="#services" class="bg-white text-indigo-600 border border-indigo-600 py-2 px-4 rounded-full mx-2 hover:bg-indigo-100 transition">
+    🧠 Explore Our Work
+  </a>
+</section>
+
+<section id="services" class="py-16 px-6 bg-white text-center">
+  <h2 class="text-3xl font-semibold text-gray-800 mb-10">What We Do</h2>
+  <div class="grid gap-8 md:grid-cols-3">
+    {services.map((service) => (
+      <ServiceCard title={service.title} description={service.description} />
+    ))}
+  </div>
+</section>
+
+<section class="bg-indigo-600 py-16 px-6 text-white text-center">
+  <h2 class="text-3xl font-semibold mb-4">Why Ushauri Bora?</h2>
+  <p class="max-w-2xl mx-auto text-lg">
+    Trusted by government agencies, NGOs, and tech innovators across Africa. Our research-backed, community-led model ensures contextual impact — not just compliance.
+  </p>
+</section>
+
+<DownloadResource />
+<NewsletterForm />
+<SiteFooter />
